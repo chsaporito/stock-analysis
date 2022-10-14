@@ -1,4 +1,4 @@
-# stock-analysis
+# Refactoring stock-analysis
 
 ## Overview of Project
 
