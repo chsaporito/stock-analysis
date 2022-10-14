@@ -6,10 +6,8 @@
 
 ### Results
 
-- What are two conclusions you can draw about the Outcomes based on Launch Date?
+### Summary
 
-- What can you conclude about the Outcomes based on Goals?
+-What are the advantages or disadvantages of refactoring code?
 
-- What are some limitations of this dataset?
-
-- What are some other possible tables and/or graphs that we could create?
+-How do these pros and cons apply to refactoring the original VBA script?
