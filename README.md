@@ -44,7 +44,7 @@ This performance increase is due to the removal of an inner loop from the origin
 
            End If
        Next j
-```vba
+```
 
 
 ### Summary
