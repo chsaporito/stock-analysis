@@ -7,7 +7,7 @@ The purpose of this project is to refactor vba code so that it will run faster, 
 ### Results
 After refacoring the code to run the stock analysis, there was a signifivcant improvement in performance. Comparing running the old code with the running of the refactored code we can see a reduction of the time that it takes from execution to getting the results. The orinal code took about a second to run which doesn't seem bad.
 
-![This is an image](https://github.com/chsaporito/stock-analysis/blob/main/Resources/VBA_Challenge_2018.png)
+![This is an image](/Resources/VBA_Challenge_2018.png)
 
 ### Summary
 
