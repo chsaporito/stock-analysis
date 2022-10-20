@@ -78,11 +78,13 @@ The refactored code loop looks like this:
 The refactored code loops through the 3,012 rows just once. This was done by using a TickerIndex variable to keep track of the index instead of using a loop. So, the refactored code should run about 12 times faster. When we divide 1 second by 0.0898, we get 11, which is close enough.
 ### Summary
 
--What are the advantages or disadvantages of refactoring code?
+- What are the advantages or disadvantages of refactoring code?
+
 Advantages of refactoring code are that it can save lots of time when running code which will lead to users have a much better experience using your code.  Log running code can drain resources and make other running programs slow as well as they compete for resources, refactoring code can minimize that risk.
 
 Disadvantages of refactoring code is that the process can be very time consuming, and the results may not produce any performance increase, or the performance increase may not be of any significance.
 
--How do these pros and cons apply to refactoring the original VBA script?
+- How do these pros and cons apply to refactoring the original VBA script?
+
 In this case, we know that data will increase as time goes and more years are added. The time that was that was put into this project was minimal but had a significant impact on the time it took to run the code. The benefits outweighed the time that it took to refactor the code.
 
