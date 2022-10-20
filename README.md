@@ -75,6 +75,7 @@ The refactored code loop looks like this:
     
     Next i
 ```
+The rfactored code loops through the 3,012 rows just once. This was done by using a TickerIndex variable to keep track of the index instead of using a loop. So the refactored code should run about 12 times faster.
 ### Summary
 
 -What are the advantages or disadvantages of refactoring code?
