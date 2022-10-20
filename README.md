@@ -3,9 +3,9 @@
 ## Overview of Project
 
 ### Purpose
-The purpose of this project is to refactor vba code so that it will run faster, improve performance and improve the user experience. Improved performance will be important as the dataset grows. To determine if there was an increase in performance, metrics will be taken for completion time.
+The purpose of this project is to refactor vba code so that it will run faster, improve performance, and improve the user experience. Improved performance will be important as the dataset grows. To determine if there was an increase in performance, metrics will be taken for completion time.
 ### Results
-After refacoring the code to run the stock analysis, there was a signifivcant improvement in performance. Comparing running the old code with the running of the refactored code we can see a reduction of the time that it takes from execution to getting the results. The orinal code took about a second to run which doesn't seem bad.
+After refactoring the code to run the stock analysis, there was a significant improvement in performance. Comparing running the old code with the running of the refactored code we can see a reduction of the time that it takes from execution to getting the results. The original code took about a second to run which doesn't seem bad.
 
 ![This is an image](/Resources/VBA_Challenge_2018.png)
 
@@ -13,7 +13,7 @@ The refactored code took less than a tenth of a second of a second to run.
 
 ![This is an image](/Resources/VBA_Challenge_2018_Refactored.png)
 
-While the difference between 1 second and 1/10 of a second would not be noticible for most,  the differnce beween 10 minutes and one minute will make a noticeable difference.  This will be important when the data scales up.
+While the difference between 1 second and 1/10 of a second would not be noticeable for most, the difference between 10 minutes and one minute will make a noticeable difference.  This will be important when the data scales up.
 
 This performance increase is due to the removal of an inner loop from the original code. The original code was written like this:
   ```vba
@@ -75,9 +75,14 @@ The refactored code loop looks like this:
     
     Next i
 ```
-The rfactored code loops through the 3,012 rows just once. This was done by using a TickerIndex variable to keep track of the index instead of using a loop. So the refactored code should run about 12 times faster.
+The refactored code loops through the 3,012 rows just once. This was done by using a TickerIndex variable to keep track of the index instead of using a loop. So, the refactored code should run about 12 times faster. When we divide 1 second by 0.0898, we get 11, which is close enough.
 ### Summary
 
 -What are the advantages or disadvantages of refactoring code?
+Advantages of refactoring code are that it can save lots of time when running code which will lead to users have a much better experience using your code.  Log running code can drain resources and make other running programs slow as well as they compete for resources, refactoring code can minimize that risk.
+
+Disadvantages of refactoring code is that the process can be very time consuming, and the results may not produce any performance increase, or the performance increase may not be of any significance.
 
 -How do these pros and cons apply to refactoring the original VBA script?
+In this case, we know that data will increase as time goes and more years are added. The time that was that was put into this project was minimal but had a significant impact on the time it took to run the code. The benefits outweighed the time that it took to refactor the code.
+
