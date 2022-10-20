@@ -9,6 +9,10 @@ After refacoring the code to run the stock analysis, there was a signifivcant im
 
 ![This is an image](/Resources/VBA_Challenge_2018.png)
 
+The refactored code took a fraction of a second to run.
+
+![This is an image](/Resources/VBA_Challenge_2018_Refactored.png)
+
 ### Summary
 
 -What are the advantages or disadvantages of refactoring code?
