@@ -45,8 +45,36 @@ This performance increase is due to the removal of an inner loop from the origin
            End If
        Next j
 ```
+We can see that the first loop "i" loops 12 times and that the second loop, "j" loops to the count of all rows which is 3,012. Multiplying 12 x 3012, we get 36,144 loops.
 
+The refactored code loop looks like this:
+  ```vba
+    ''2b) Loop over all the rows in the spreadsheet.
+    For i = 2 To RowCount
+    
+        '3a) Increase volume for current ticker
+        tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+        
+        '3b) Check if the current row is the first row with the selected tickerIndex.
+        If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
 
+               tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+
+        End If
+        
+        '3c) check if the current row is the last row with the selected ticker
+         'If the next row’s ticker doesn’t match, increase the tickerIndex.
+        If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
+
+            tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
+            
+            tickerIndex = tickerIndex + 1
+            
+        End If
+
+    
+    Next i
+```
 ### Summary
 
 -What are the advantages or disadvantages of refactoring code?
